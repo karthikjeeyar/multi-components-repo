@@ -24,7 +24,9 @@ spec:
   - name: output-image
     value: quay.io/redhat-appstudio/user-workload:{{revision}}
   - name: dockerfile
-    value: https://raw.githubusercontent.com/karthikjeeyar/multi-components/main/nodejs-app/Dockerfile
+    value: https://raw.githubusercontent.com/karthikjeeyar/multi-components-repo/main/nodejs-app/Dockerfile
+  - name: path-context
+    value: nodejs-app
   pipelineRef:
     bundle: quay.io/redhat-appstudio/hacbs-templates-bundle:latest
     name: docker-build
