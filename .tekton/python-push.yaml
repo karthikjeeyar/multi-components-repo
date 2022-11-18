@@ -24,7 +24,9 @@ spec:
   - name: output-image
     value: quay.io/redhat-appstudio/user-workload:{{revision}}
   - name: dockerfile
-    value: https://raw.githubusercontent.com/karthikjeeyar/multi-components/main/python-app/docker/Dockerfile
+    value: https://raw.githubusercontent.com/devfile-samples/devfile-sample-python-basic/main/docker/Dockerfile
+  - name: path-context
+    value: ./
   pipelineRef:
     bundle: quay.io/redhat-appstudio/hacbs-templates-bundle:latest
     name: docker-build
